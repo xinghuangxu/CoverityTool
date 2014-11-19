@@ -1,0 +1,8 @@
+
+dcdCoreDumpMgr.cc: $(wildcard .dcdCoreDumpMgr.cc/bigleverfilelogic.bllt .dcdCoreDumpMgr.cc/dcdCoreDumpMgr.cc)
+	if [ ! -d $(CURDIR)/.dcdCoreDumpMgr.cc ]; then \
+	    echo "invalid variation point: $(CURDIR)/.dcdCoreDumpMgr.cc"; \
+	else \
+	    echo "local reactuation: $(CURDIR)/.dcdCoreDumpMgr.cc"; \
+	    $(MPREP) -a reactuate -vp $(CURDIR)/.dcdCoreDumpMgr.cc; \
+	fi

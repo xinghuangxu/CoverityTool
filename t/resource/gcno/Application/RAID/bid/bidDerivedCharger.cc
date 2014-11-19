@@ -1,0 +1,1 @@
+.bidDerivedCharger.cc/bidChargerLTC4100.cc

@@ -1,0 +1,8 @@
+
+bidBatteryDriverMgrVar.cc: $(wildcard .bidBatteryDriverMgrVar.cc/bidBatteryDriverMgrVar.cc .bidBatteryDriverMgrVar.cc/bigleverfilelogic.bllt)
+	if [ ! -d $(CURDIR)/.bidBatteryDriverMgrVar.cc ]; then \
+	    echo "invalid variation point: $(CURDIR)/.bidBatteryDriverMgrVar.cc"; \
+	else \
+	    echo "local reactuation: $(CURDIR)/.bidBatteryDriverMgrVar.cc"; \
+	    $(MPREP) -a reactuate -vp $(CURDIR)/.bidBatteryDriverMgrVar.cc; \
+	fi

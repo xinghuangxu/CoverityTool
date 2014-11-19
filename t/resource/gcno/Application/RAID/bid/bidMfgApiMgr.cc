@@ -1,0 +1,1 @@
+.bidMfgApiMgr.cc/bidMfgApiSmartSingle.cc

@@ -1,0 +1,1 @@
+../../../../../RAIDCore/cas/bid/src/.bidMfgApiMgr.cc/bidMfgApiSmartSingle.cc

@@ -1,0 +1,8 @@
+
+bidLogTemperature.cc: $(wildcard .bidLogTemperature.cc/bidLogTemperature.cc .bidLogTemperature.cc/bidStubLogTemperature.cc .bidLogTemperature.cc/bigleverfilelogic.bllt)
+	if [ ! -d $(CURDIR)/.bidLogTemperature.cc ]; then \
+	    echo "invalid variation point: $(CURDIR)/.bidLogTemperature.cc"; \
+	else \
+	    echo "local reactuation: $(CURDIR)/.bidLogTemperature.cc"; \
+	    $(MPREP) -a reactuate -vp $(CURDIR)/.bidLogTemperature.cc; \
+	fi

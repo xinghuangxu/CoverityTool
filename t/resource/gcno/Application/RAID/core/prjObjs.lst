@@ -1,0 +1,10 @@
+dcd/dcdCoreDumpMetadata.o
+dcd/dcdCoreDumpMgr.o
+dcd/dcdCoreDumpModuleInfo.o
+dcd/dcdCoreDumpROMetadata.o
+dcd/dcdCoreDumpROModuleInfo.o
+dcd/dcdSectionMetadata.o
+dcd/dcdSod.o
+dcd/dcdStorageRecord.o
+dcd/dcdTrace.o
+dcdm/dcdmSymbol.o

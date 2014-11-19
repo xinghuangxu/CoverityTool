@@ -1,0 +1,1 @@
+.bidDerivedBattery.cc/bidBBUSmartSingle.cc

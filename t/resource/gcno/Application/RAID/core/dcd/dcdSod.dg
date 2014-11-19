@@ -1,0 +1,8 @@
+
+dcdSod.cc: $(wildcard .dcdSod.cc/bigleverfilelogic.bllt .dcdSod.cc/dcdSod.cc)
+	if [ ! -d $(CURDIR)/.dcdSod.cc ]; then \
+	    echo "invalid variation point: $(CURDIR)/.dcdSod.cc"; \
+	else \
+	    echo "local reactuation: $(CURDIR)/.dcdSod.cc"; \
+	    $(MPREP) -a reactuate -vp $(CURDIR)/.dcdSod.cc; \
+	fi

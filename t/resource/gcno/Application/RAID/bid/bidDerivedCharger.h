@@ -1,0 +1,1 @@
+.bidDerivedCharger.h/bidChargerLTC4100.h

@@ -1,0 +1,8 @@
+
+dcdStorageRecord.cc: $(wildcard .dcdStorageRecord.cc/bigleverfilelogic.bllt .dcdStorageRecord.cc/dcdStorageRecord.cc)
+	if [ ! -d $(CURDIR)/.dcdStorageRecord.cc ]; then \
+	    echo "invalid variation point: $(CURDIR)/.dcdStorageRecord.cc"; \
+	else \
+	    echo "local reactuation: $(CURDIR)/.dcdStorageRecord.cc"; \
+	    $(MPREP) -a reactuate -vp $(CURDIR)/.dcdStorageRecord.cc; \
+	fi

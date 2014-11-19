@@ -1,0 +1,97 @@
+bidLEDMgr.o: bidLEDMgr.cc \
+  $(BASEDIR)/.common/CommonDefs.h \
+  $(BASEDIR)/Platform/System/BSP/proj/VxWorksDefs.h \
+  $(BASEDIR)/Platform/Lib/vkiWrap.h \
+  $(BASEDIR)/Platform/Lib/cmnDefs.h \
+  $(BASEDIR)/Platform/Lib/cmnOS.h \
+  /soft/windriver/pne/3.9.3.3-1.1.1/VSBs/nehalem_smp.3/h/config/vsbConfig.h \
+  /soft/windriver/pne/3.9.3.3-1.1.1/VSBs/nehalem_smp.3/h/config/autoconf.h \
+  $(BASEDIR)/Platform/System/BSP/proj/prjComps.h \
+  $(BASEDIR)/Platform/Lib/cmnIO.h \
+  $(BASEDIR)/Platform/Lib/cmnIOP.h \
+  $(BASEDIR)/Platform/Lib/hwCpu.h \
+  $(BASEDIR)/Platform/Lib/hwInline.h \
+  $(BASEDIR)/Platform/Lib/hwCpuP.h \
+  $(BASEDIR)/Platform/Lib/hwCpuCmn.h \
+  $(BASEDIR)/Platform/Lib/bcmHardware.h \
+  $(BASEDIR)/Platform/Lib/cmnPCI.h \
+  $(BASEDIR)/Platform/Lib/cmnTypes.h \
+  $(BASEDIR)/Platform/Lib/cmnDefines.h \
+  $(BASEDIR)/Platform/Lib/bcmDefines.h \
+  $(BASEDIR)/Platform/Lib/bcmProductDefs.h \
+  $(BASEDIR)/Platform/Lib/Platform.h \
+  $(BASEDIR)/Platform/System/BSP/itl_nehalem/xbb.h \
+  $(BASEDIR)/Platform/Lib/flashDefs.h \
+  $(BASEDIR)/Platform/Lib/flashOrg.h \
+  $(BASEDIR)/Platform/Lib/i2cAddrs.h \
+  $(BASEDIR)/Platform/Lib/platformRegs.h \
+  $(BASEDIR)/Platform/System/BSP/itl_nehalem/configInum.h \
+  $(BASEDIR)/Platform/Lib/bcmSystemP.h \
+  $(BASEDIR)/Platform/Lib/bcmAdapter.h \
+  $(BASEDIR)/Platform/Lib/modelConfigCmn.h \
+  $(BASEDIR)/Platform/Lib/sysErrLog.h \
+  $(BASEDIR)/Platform/Lib/sysNvsramLib.h \
+  $(BASEDIR)/Platform/Lib/sysExtLib.h \
+  $(BASEDIR)/Platform/Lib/cmnField.h \
+  $(BASEDIR)/Platform/Lib/cmnFormat.h \
+  /soft/windriver/pne/3.9.3.3-1.1.1/components/ip_net2-6.9/vxcoreip/include/net/uio.h \
+  /soft/windriver/pne/3.9.3.3-1.1.1/components/ip_net2-6.9/vxcoreip/include/sys/cdefs.h \
+  /soft/windriver/pne/3.9.3.3-1.1.1/components/ip_net2-6.9/vxcoreip/include/netVersion.h \
+  $(BASEDIR)/Platform/Lib/psvLib.h \
+  $(BASEDIR)/Platform/Lib/nmiLib.h \
+  $(BASEDIR)/Platform/Lib/private/sxVKI.h \
+  $(BASEDIR)/Platform/Lib/hwCpu.h \
+  $(BASEDIR)/Platform/Lib/dbgMonLib.h \
+  $(BASEDIR)/Platform/Lib/private/vkiMisc.h \
+  $(BASEDIR)/Platform/Lib/private/vkiStr.h \
+  $(BASEDIR)/Platform/Lib/private/vkiTime.h \
+  $(BASEDIR)/Platform/Lib/private/vkiTask.h \
+  $(BASEDIR)/Platform/Lib/private/vkiIntr.h \
+  $(BASEDIR)/Platform/Lib/private/vkiSync.h \
+  $(BASEDIR)/Platform/Lib/private/sxVKI.h \
+  $(BASEDIR)/Platform/Lib/private/vkiTimer.h \
+  $(BASEDIR)/Platform/Lib/private/vkiFile.h \
+  $(BASEDIR)/Platform/Lib/private/vkiFmtIO.h \
+  $(BASEDIR)/Platform/Lib/private/vkiMisc.h \
+  $(BASEDIR)/Platform/Lib/private/vkiMultiCore.h \
+  $(BASEDIR)/Platform/Lib/private/vkiMem.h \
+  $(BASEDIR)/Platform/Lib/private/vkiState.h \
+  $(BASEDIR)/Application/RAIDLib/bidBatteryStatus.h \
+  $(BASEDIR)/Platform/Lib/cmnTypes.h \
+  bidLEDMgr.h \
+  $(BASEDIR)/Application/RAIDLib/bidLEDMgmt.h \
+  $(BASEDIR)/Application/RAIDLib/bidBatteryStatus.h \
+  $(BASEDIR)/Application/RAIDLib/utlSingletonMgmt.h \
+  $(BASEDIR)/Platform/Lib/assert.h \
+  $(BASEDIR)/Platform/Lib/bcmDiscreteLines.h \
+  $(BASEDIR)/Platform/Lib/bcmDiscreteLinesP.h \
+  $(BASEDIR)/Platform/Lib/discreteLineTableP.h \
+  $(BASEDIR)/Platform/Lib/subsystemLinesP.h \
+  $(BASEDIR)/Platform/Lib/tempSensorMgr.h \
+  $(BASEDIR)/Platform/Lib/discreteLinesP.h \
+  $(BASEDIR)/Platform/Lib/private/supportCru.h \
+  $(BASEDIR)/Platform/Lib/private/bbu.h \
+  $(BASEDIR)/Platform/Lib/i2c.h \
+  $(BASEDIR)/Platform/Lib/vkiWrap.h \
+  $(BASEDIR)/Application/RAIDLib/utlSingletonMgr.h \
+  $(BASEDIR)/Application/RAIDLib/utlTemplateUtilities.h \
+  bidLib.h \
+  $(BASEDIR)/Application/RAIDLib/utlTimerMgmt.h \
+  $(BASEDIR)/Application/RAIDLib/utlSingletonMgr.h \
+  $(BASEDIR)/Application/RAIDLib/utlDll.h \
+  $(BASEDIR)/Application/RAIDLib/utlStaticString.h \
+  $(BASEDIR)/Application/RAIDLib/utlServerCore.h \
+  bidTrace.h \
+  $(BASEDIR)/Platform/Lib/dqvki.h \
+  $(BASEDIR)/Platform/Lib/dq.h \
+  $(BASEDIR)/Platform/Lib/lblTbl.h \
+  $(BASEDIR)/Platform/Lib/lblTbl.h \
+  $(BASEDIR)/Platform/Lib/bcmLED.h
+
+bidLEDMgr.cc: $(wildcard .bidLEDMgr.cc/bidLEDMgr.cc .bidLEDMgr.cc/bigleverfilelogic.bllt)
+	if [ ! -d $(CURDIR)/.bidLEDMgr.cc ]; then \
+	    echo "invalid variation point: $(CURDIR)/.bidLEDMgr.cc"; \
+	else \
+	    echo "local reactuation: $(CURDIR)/.bidLEDMgr.cc"; \
+	    $(MPREP) -a reactuate -vp $(CURDIR)/.bidLEDMgr.cc; \
+	fi

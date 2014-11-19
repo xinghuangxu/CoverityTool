@@ -1,0 +1,8 @@
+
+bidLEDMgr.cc: $(wildcard .bidLEDMgr.cc/bidLEDMgr.cc .bidLEDMgr.cc/bigleverfilelogic.bllt)
+	if [ ! -d $(CURDIR)/.bidLEDMgr.cc ]; then \
+	    echo "invalid variation point: $(CURDIR)/.bidLEDMgr.cc"; \
+	else \
+	    echo "local reactuation: $(CURDIR)/.bidLEDMgr.cc"; \
+	    $(MPREP) -a reactuate -vp $(CURDIR)/.bidLEDMgr.cc; \
+	fi
