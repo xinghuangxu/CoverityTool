@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-
 # NAME: CoverageBatch.pm
 # SUMMARY: Create Coverage Batch Import file for Coverity
 # UPDATE DATE: Feb 19, 2014
@@ -10,7 +9,9 @@
 # Input Parameters: See sub new() below
 #
 
+
 package Coverity::CoverageBatch;
+
 use strict;
 use warnings;
 use File::Basename;
@@ -38,6 +39,7 @@ our @EXPORT = qw(
 
 our $VERSION = '0.01';
 
+#start getter/setter
 sub gcdaFolder {
     my $self = shift;
     if(@_) {
@@ -80,12 +82,15 @@ sub output {
     }
     return $self->{output};
 }
+#end getter/setter
 
-sub new{
+#constructor
+sub new($$){
 	my ($class,$param)=@_;
 	return bless $param, $class;
 }
 
+#main, create a batch file for a test
 sub create{
 	my $self=shift;
 	my $filename = $self->output;
@@ -104,7 +109,8 @@ HEADER
 	close $fh;
 }
 
-sub traverse_gcda{
+#traverse and find all gcda files in a folder
+sub traverse_gcda($$$){
 	my($self,$folder,$fileHandler)=@_;
 	if($self->is_gcda_file($folder)){
 		$self->prepare_batch($folder,$fileHandler);
@@ -119,7 +125,8 @@ sub traverse_gcda{
 	return;
 }
 
-sub is_gcda_file{
+#check if a file name ends in gcda
+sub is_gcda_file($$){
 	my($self,$filename)=@_;
 	my $char='.';
 	my $lindex=rindex($filename,$char);
@@ -128,20 +135,23 @@ sub is_gcda_file{
 	return 0;
 }
 
-sub get_relative_path{
+#get relative path Example: 'aa/application/aa/bb.gcda' relative to 'application' folder will give you '/aa/bb.gcda'
+sub get_relative_path($$){
 	my($filename,$relFolderName)=@_;
 	my $index=rindex($filename,$relFolderName);
 	return substr $filename, $index+length($relFolderName);
 }
 
-sub get_gcno_path{
+#get gcno path based on gcda file path
+sub get_gcno_path($$){
 	my ($self,$gcdaFile) = @_;
 	my $relativePath = get_relative_path($gcdaFile,'Application');
 	$relativePath =~ s/\.gcda/\.gcno/;
 	return $self->gcnoFolder.$relativePath;
 }
 
-sub prepare_batch{
+#generate process command for one gcda file and write to output file
+sub prepare_batch($$$){
 	my($self,$gcdaFile,$fileHandler)=@_;
 	my $filenameLength=length($gcdaFile);
 	my $gcdaStr="gcda:".$filenameLength.":".$gcdaFile."\n";

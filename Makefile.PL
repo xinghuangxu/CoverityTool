@@ -1,4 +1,6 @@
 use ExtUtils::MakeMaker;
 WriteMakefile(
-		NAME => "CoverityTool"
+		NAME => "CoverityTool",
+		VERSION => "0.01",
+		AUTHOR => "Leonx@netapp.com"
 );
