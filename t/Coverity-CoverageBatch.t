@@ -11,6 +11,7 @@
 
 use Test::More;
 BEGIN { use_ok('Coverity::CoverageBatch') };
+require_ok( 'Coverity::CoverageBatch' );
 
 use File::Basename;
 use Cwd 'abs_path';
@@ -28,7 +29,7 @@ my $coverageConfigHash = {
 	output=>$dirname.'/temp/temp.batch'
 };
 
-require_ok( 'Coverity::CoverageBatch' );
+
 
 my $coverageBatch=Coverity::CoverageBatch->new($coverageConfigHash);
 
